@@ -1,8 +1,9 @@
 import axios from 'axios'
-const React_App_Bckend_URL=process.env.React_App_Bckend_URL
+const React_App_Backend_URL=process.env.React_App_Backend_Url
 export const getScrapping=async (domain)=>{
     try {
-        const result=await axios.get(`${React_App_Bckend_URL}/scrape?id=${domain}`,{
+        console.log(React_App_Backend_URL);
+        const result=await axios.get(`${React_App_Backend_URL}/scrape?id=${domain}`,{
             validateStatus(status) {
                 return status === 200 || status === 400; // Only resolve these status codes
             }
