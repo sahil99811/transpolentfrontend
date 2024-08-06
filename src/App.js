@@ -12,7 +12,7 @@ function App() {
       toast.error("Domain Name is required");
       return;
     }
-    const result=await getScrapping();
+    const result=await getScrapping(domain);
     setresult(result);
     setDomain('');
   }
